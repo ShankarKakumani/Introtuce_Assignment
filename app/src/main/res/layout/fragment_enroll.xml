@@ -41,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/light_blue_900"
                     android:layout_gravity="center"
-                    android:text="Select Profile Photo"
+                    android:text="@string/select_profile_photo"
                     android:textStyle="bold"
                     android:textSize="18sp"
                     />
@@ -63,7 +63,7 @@
                         android:id="@+id/firstName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="First Name"
+                        android:hint="@string/first_name"
                         android:inputType="textPersonName"
                         android:lines="1"
                         android:singleLine="true"
@@ -84,7 +84,7 @@
                         android:id="@+id/lastName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Last Name"
+                        android:hint="@string/last_name"
                         android:lines="1"
                         android:inputType="textPersonName"
                         android:singleLine="true"
@@ -106,7 +106,7 @@
                         android:layout_width="match_parent"
                         android:inputType="date"
                         android:layout_height="wrap_content"
-                        android:hint="Date of birth"
+                        android:hint="@string/date_of_birth"
                         android:lines="1"
                         android:singleLine="true"
                         android:textSize="14sp"
@@ -126,7 +126,7 @@
                         android:layout_width="match_parent"
                         android:inputType="number"
                         android:layout_height="wrap_content"
-                        android:hint="Age"
+                        android:hint="@string/age"
                         android:maxLength="2"
                         android:lines="1"
                         android:singleLine="true"
@@ -150,7 +150,7 @@
                         android:lines="1"
                         android:inputType="textCapSentences"
                         android:singleLine="true"
-                        android:hint="Gender"
+                        android:hint="@string/gender"
                         android:textSize="14sp"
                         >
 
@@ -168,7 +168,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textCapSentences"
-                        android:hint="Country"
+                        android:hint="@string/country"
                         android:lines="1"
                         android:singleLine="true"
                         android:textSize="14sp"
@@ -191,7 +191,7 @@
                         android:singleLine="true"
                         android:inputType="textCapSentences"
                         android:textSize="14sp"
-                        android:hint="State"
+                        android:hint="@string/state"
                         >
 
                     </com.google.android.material.textfield.TextInputEditText>
@@ -211,7 +211,7 @@
                         android:inputType="textCapSentences"
                         android:singleLine="true"
                         android:textSize="14sp"
-                        android:hint="Home Town"
+                        android:hint="@string/home_town"
                         >
 
                     </com.google.android.material.textfield.TextInputEditText>
@@ -227,7 +227,7 @@
                         android:id="@+id/phoneNumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Phone Number"
+                        android:hint="@string/phone_number"
                         android:inputType="phone"
                         android:singleLine="true"
                         android:textSize="14sp"
@@ -249,7 +249,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="1"
-                        android:hint="Telephone number"
+                        android:hint="@string/telephone_number"
                         android:singleLine="true"
                         android:inputType="phone"
                         android:textSize="14sp"
@@ -269,7 +269,7 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:backgroundTint="@color/light_blue_900"
-        android:text="ADD USER"
+        android:text="@string/add_user"
         android:textColor="@color/white"
         android:textStyle="bold"
         />

@@ -22,12 +22,13 @@
             android:background="?actionBarItemBackground"
             android:src="@drawable/ic_baseline_close_24"
             android:clickable="true"
-            app:tint="@color/light_blue_900" />
+            app:tint="@color/light_blue_900"
+            android:focusable="true" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Demo Application"
+            android:text="@string/demo_application"
             android:gravity="center"
             android:textStyle="bold"
             android:textSize="18sp"

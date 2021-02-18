@@ -36,7 +36,6 @@
                 android:textStyle="bold"
                 android:textSize="16sp"
                 android:textColor="@color/light_blue_900"
-                android:text="Shankar Chowdary"
 
                 />
             <TextView
@@ -44,7 +43,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Female | 34 | Hyderabad"
 
                 />
 
@@ -60,7 +58,8 @@
             android:src="@drawable/ic_baseline_delete_24"
             app:tint="@color/light_blue_900"
             android:background="?actionBarItemBackground"
-            android:clickable="true"/>
+            android:clickable="true"
+            android:focusable="true" />
     </RelativeLayout>
 
 
