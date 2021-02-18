@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1082667982626",
+    "project_id": "introtuce-assignment-10a55",
+    "storage_bucket": "introtuce-assignment-10a55.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082667982626:android:fc21dadcc62d9dc7028f7b",
+        "android_client_info": {
+          "package_name": "com.shankar.introtuceassignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082667982626-jfpkaiqp5on3npi7h0bp0dgcbtnvautp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb83GOY1Qqxcck2uy0ZxugzktYhpY-hjg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1082667982626-jfpkaiqp5on3npi7h0bp0dgcbtnvautp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
