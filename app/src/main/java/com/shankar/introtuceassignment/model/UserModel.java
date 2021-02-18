@@ -1,4 +1,4 @@
-package com.shankar.introtuceassignment;
+package com.shankar.introtuceassignment.model;
 
 public class UserModel {
 

@@ -1,4 +1,4 @@
-package com.shankar.introtuceassignment;
+package com.shankar.introtuceassignment.Fragments;
 
 import android.Manifest;
 import android.app.ProgressDialog;
@@ -31,6 +31,8 @@ import com.google.firebase.iid.FirebaseInstanceId;
 import com.shankar.customtoast.Keyboard;
 import com.shankar.customtoast.Snacky;
 import com.shankar.customtoast.Toasty;
+import com.shankar.introtuceassignment.R;
+import com.shankar.introtuceassignment.model.UserModel;
 
 import java.util.List;
 

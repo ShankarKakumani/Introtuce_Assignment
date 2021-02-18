@@ -1,4 +1,4 @@
-package com.shankar.introtuceassignment;
+package com.shankar.introtuceassignment.view;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mikhaellopez.circularimageview.CircularImageView;
+import com.shankar.introtuceassignment.R;
 
 public class UserView extends RecyclerView.ViewHolder {
 

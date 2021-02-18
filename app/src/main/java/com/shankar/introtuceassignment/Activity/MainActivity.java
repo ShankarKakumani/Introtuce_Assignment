@@ -1,4 +1,4 @@
-package com.shankar.introtuceassignment;
+package com.shankar.introtuceassignment.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,9 +10,9 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.iid.FirebaseInstanceId;
+import com.shankar.introtuceassignment.Fragments.EnrollFragment;
+import com.shankar.introtuceassignment.R;
+import com.shankar.introtuceassignment.Fragments.UsersFragment;
 
 import java.util.ArrayList;
 import java.util.List;

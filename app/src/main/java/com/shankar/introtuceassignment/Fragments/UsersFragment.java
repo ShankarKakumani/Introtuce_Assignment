@@ -1,4 +1,4 @@
-package com.shankar.introtuceassignment;
+package com.shankar.introtuceassignment.Fragments;
 
 import android.os.Bundle;
 
@@ -21,7 +21,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.shankar.customtoast.Toasty;
+import com.shankar.introtuceassignment.R;
+import com.shankar.introtuceassignment.view.UserView;
+import com.shankar.introtuceassignment.model.UserModel;
 
 
 public class UsersFragment extends Fragment {
@@ -32,7 +34,7 @@ public class UsersFragment extends Fragment {
     }
 
     DatabaseReference mUsers;
-    FirebaseRecyclerAdapter<UserModel,UserView> usersAdapter;
+    FirebaseRecyclerAdapter<UserModel, UserView> usersAdapter;
     RecyclerView usersRecycler;
 
     View mView;
