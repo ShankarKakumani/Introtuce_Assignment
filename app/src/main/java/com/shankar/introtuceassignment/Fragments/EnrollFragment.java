@@ -1,7 +1,10 @@
 package com.shankar.introtuceassignment.Fragments;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -12,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
@@ -34,6 +38,7 @@ import com.shankar.customtoast.Toasty;
 import com.shankar.introtuceassignment.R;
 import com.shankar.introtuceassignment.model.UserModel;
 
+import java.util.Calendar;
 import java.util.List;
 
 public class EnrollFragment extends Fragment {
@@ -51,6 +56,7 @@ public class EnrollFragment extends Fragment {
     public final int PICK_IMAGE = 1;
     final int REQUEST_EXTERNAL_STORAGE = 100;
     public String imagePath = " ";
+    private int mYear, mMonth, mDay;
 
     ProgressDialog progressDialog;
     @Override
@@ -66,6 +72,7 @@ public class EnrollFragment extends Fragment {
 
 
         initComponents();
+        datOfBirth();
         return mView;
     }
 
@@ -211,6 +218,32 @@ public class EnrollFragment extends Fragment {
 
 
 
+    private void datOfBirth() {
+
+        //Date and Time Picker
+        dateOfBirth.setOnClickListener(v -> {
+
+            try {
+                final Calendar c = Calendar.getInstance();
+                mYear = c.get(Calendar.YEAR);
+                mMonth = c.get(Calendar.MONTH);
+                mDay = c.get(Calendar.DAY_OF_MONTH);
+                @SuppressLint("DefaultLocale") DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), (DatePickerDialog.OnDateSetListener) (view, year, month, dayOfMonth) ->
+                {
+                    dateOfBirth.setText(String.format("%02d-%02d-%4d", dayOfMonth, month + 1, year));
+                    //date.setText(String.format("%4d-%02d-%02d",year, month + 1, dayOfMonth));
+                }, mYear, mMonth, mDay);
+
+                datePickerDialog.show();
+
+            } catch (Exception e) {
+                Toast.makeText(getActivity(), "Something Went Error", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+    }
+
     public void onImageClick() {
 
         if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
@@ -231,8 +264,6 @@ public class EnrollFragment extends Fragment {
 
     public void ImagePickerWithoutDependency()
     {
-        
-        //I faced some problems with this so i used a dependency to pick images from Device
 
         if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_EXTERNAL_STORAGE);
@@ -266,7 +297,6 @@ public class EnrollFragment extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        //This Method have some Problems. So i had to use dependency.
 //        if (requestCode == 1) {
 //            if (resultCode == Activity.RESULT_OK) {
 //                if (data.getClipData() != null) {
