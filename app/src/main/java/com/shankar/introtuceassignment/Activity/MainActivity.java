@@ -7,6 +7,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
@@ -16,6 +18,7 @@ import com.shankar.introtuceassignment.Fragments.UsersFragment;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +30,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        String uniqueId = UUID.randomUUID().toString();
+        SharedPreferences sharedpreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        String uniqueIdCheck = sharedpreferences.getString("uniqueId",null);
+
+        if(uniqueIdCheck == null)
+        {
+            SharedPreferences.Editor editor = sharedpreferences.edit();
+            editor.putString("uniqueId",uniqueId);
+            editor.apply();
+        }
+
 
 
         findViewById(R.id.finishImageView).setOnClickListener(v -> finish());
